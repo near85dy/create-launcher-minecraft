@@ -1,0 +1,26 @@
+{
+  "name": "create_launcher",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/near85dy/create-launcher-minecraft#readme",
+  "bugs": {
+    "url": "https://github.com/near85dy/create-launcher-minecraft/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/near85dy/create-launcher-minecraft.git"
+  },
+  "license": "ISC",
+  "author": "kirills",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron dist/main.js",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.0",
+    "electron": "^37.2.6",
+    "typescript": "^5.9.2"
+  }
+}
