@@ -12,7 +12,6 @@
     
     "rootDir": "./src",
     "outDir": "./dist",
-
     "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": false,
@@ -20,5 +19,7 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include": ["src/electron"],
+  "exclude": ["node_modules"]
 }
