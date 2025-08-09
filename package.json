@@ -17,12 +17,29 @@
   "scripts": {
     "start": "concurrently -k \"npm run dev\" \"npm run electron\"",
     "dev": "vite dev",
-    "build": "vite build",
-    "electron": "tsc && cd dist && electron electron/main.js",
-    "compile": "tsc",
-    "watch": "tsc -w"
+    "build:react": "vite build",
+    "build:electron": "electron-builder",
+    "electron": "tsc && cd dist && electron electron/main.js"
+  },
+  "build": {
+    "appId": "com.example.create_launcher",
+    "productName": "Create launcher",
+    "files": [
+      "./dist/react/**",
+      "./dist/electron/main.js"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "sign": false,
+      "target": "nsis",
+      "certificateFile": "certs/mycert.pfx",
+      "certificatePassword": "1234"
+    }
   },
   "devDependencies": {
+    "@types/adm-zip": "^0.5.7",
     "@types/node": "^24.2.0",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
@@ -34,8 +51,10 @@
     "vite": "^5.0.0"
   },
   "dependencies": {
+    "adm-zip": "^0.5.16",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^7.7.1"
   }
 }

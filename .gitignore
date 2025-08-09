@@ -1,5 +1,7 @@
 node_modules
 dist
+certs
+release
 .env
 .env.local
 .env.development.local
